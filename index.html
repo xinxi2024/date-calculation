@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期差计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>日期差计算器</h1>
+        <div class="calculator">
+            <div class="date-inputs">
+                <div class="input-group">
+                    <label for="startDate">开始日期：</label>
+                    <input type="date" id="startDate" required>
+                </div>
+                <div class="input-group">
+                    <label for="endDate">结束日期：</label>
+                    <input type="date" id="endDate" required>
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="workdaysOnly">
+                    <label for="workdaysOnly">只计算工作日（周一至周五）</label>
+                </div>
+                <div id="holidaysSection" class="hidden">
+                    <h3>输入节假日（每行一个，格式：YYYY-MM-DD）</h3>
+                    <textarea id="holidays" rows="5" placeholder="例如：&#10;2023-01-01&#10;2023-01-02"></textarea>
+                </div>
+            </div>
+            
+            <button id="calculate">计算</button>
+            
+            <div class="results">
+                <div class="result-item">
+                    <span>总天数：</span>
+                    <span id="totalDays">-</span>
+                </div>
+                <div id="workdayResult" class="result-item hidden">
+                    <span>工作日天数：</span>
+                    <span id="workDays">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
